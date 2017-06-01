@@ -1,0 +1,12 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Antevenio\\":"src/"
+        }
+    },
+    "require" : {
+        "facebook/graph-sdk" : "~5.0",
+        "slim/slim": "^3.0",
+        "catfan/Medoo": "^1.1"
+    }
+}

@@ -1,0 +1,239 @@
+body {
+    background: whitesmoke;
+    font-size: 16px;
+}
+
+#lightbox {
+    background: #fff;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    opacity: 1;
+    width: 100%;
+    z-index: 100;
+}
+
+#wrapper {
+    overflow: auto;
+    padding: 5%;
+    width: 90%;
+}
+
+#header img {
+    width: 100%;
+}
+
+.body {
+    background: #37a6dd;
+}
+
+.description {
+    color: #fff;
+    padding: 1em;
+}
+
+.separator {
+    background: #37a6dd;
+    height: 2em;
+    margin-bottom: 3em; 
+    text-align: center;
+}
+
+.triangle {         
+    border-left: 1.5em solid transparent;
+    border-right: 1.5em solid transparent;
+    border-top: 2em solid #37a6dd;
+    display: inline-block;
+    height: 0;
+    margin-top: 2em;
+    width: 0;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer h2 {
+    color: #e56e10;
+}
+
+.footer input[type="email"],
+.footer input[type="text"],
+.footer input[type="date"] {
+    border: 1px solid #e56e10;
+    border-radius: 1px;
+    color: #e56e10;
+    margin: .5em 0;
+    padding: 1%;
+    width: 20%;
+}
+
+.footer input[type="date"] {
+    height: 18px !important;
+}
+
+.footer button[type="submit"], .btn-green {
+    background: #37a6dd;
+    border: 1px solid #37a6dd;
+    border-radius: 1px;
+    cursor: pointer;
+    color: #fff;
+    margin: .5em 0;
+    padding: 1%;
+    width: 20%;
+}
+
+.answered span {
+    background: #31e165;
+    color: #fff;
+    font-size: 3em;
+    padding: 0 .2em 0 .2em;
+}
+
+.answer,
+.answer p,
+.answer-img, 
+.answer-title,
+.answer-info,
+.answer-description,
+#answers,
+.answer-votes, .answer-votes-img, .answer-votes-info {
+    margin: 0;
+    padding: 0;
+}
+
+.answer, .voted-answer, .answer-votes {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.answered {
+    background: #e56e10;
+    height: 1em;
+    margin-bottom: -1em !important;
+    position: relative;
+    text-align: right;
+}
+
+.answered span {
+    background: #e56e10;
+    color: #fff;
+    font-size: 3em;
+    padding: 0 .2em 0 .2em;
+}
+
+.answer-img, .voted-answer-img, .answer-votes-img {
+    height: 100%;
+    width: 100%;
+}
+
+.answer-info, .answer-votes-info {
+    background: rgba(0,0,0,.5);
+    height: 2em;
+    margin-top: -3em;
+    padding: .5em .5em .3em .5em;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.answer-title {
+    color: #37a6dd;
+    font-size: .8em;
+    font-weight: bold;
+}
+
+.answer-description {
+    color: #fff;
+    font-size: .8em;
+}
+
+@media only screen and (min-width:320px) {
+    .answer {
+        width: 100%;
+    }
+
+    .voted-answer, .answer-votes {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:420px) {
+    .answer, .voted-answer, .answer-votes {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width:620px) {
+    .answer, .voted-answer, .answer-votes {
+        width: 33.3%;
+    }
+}
+
+@media only screen and (min-width:820px) {
+    .answer {
+        width: 20%;
+    }
+
+    .answer-votes {
+        width: 10% !important;
+    }
+
+    .voted-answer {
+        margin: 0 1% 0 0;
+        width: 11.5% !important;
+    }
+
+    #footer button[type="submit"], .btn-green,
+    input[type="email"],
+    input[type="text"],
+    input[type="date"] {
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    #wrapper {
+        margin: auto;
+        width: 80%;
+    }
+}
+
+
+/*** thanks page ***/
+
+#thanks {
+    margin-top: 80px;
+}
+
+#voted-answers {
+    top: -50px;
+    text-align: center;
+    position: relative;
+}
+
+.thanks-title {
+    color: #e56e10;
+}
+
+.thanks-info {
+    color: #fff;
+    margin-top: -35px !important;
+    text-align: center;
+}
+
+.voted-answer-description, .voted-answer-title {
+    text-align: left;
+    margin: 0;
+}
+
+.voted-answer-description {
+    color: #e56e10;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.voted-answer-title {
+    color: #fff;
+    font-size: 13px;
+}
