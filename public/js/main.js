@@ -269,18 +269,24 @@ var AntevenioApp = (function() {
                 return alert('Completa las respuestas.');
             }
 
-            var name  = document.getElementById('name');
-            var email = document.getElementById('email');
-            var birthdate = document.getElementById('birthdate');
+            var name   = document.getElementById('name');
+            var email  = document.getElementById('email');
+            var day    = document.getElementById('day');
+            var month  = document.getElementById('month');
+            var year   = document.getElementById('year');
+            var gender = document.getElementById('gender');
 
-            if ('' === name.value.trim() || '' === email.value.trim() || '' === birthdate.value.trim()) {
-                return alert('Por favor completa los campos (nombre y/o email).');
+            if ('' === name.value.trim() || '' === email.value.trim() || ('' === day.value.trim() && '' === month.value.trim() && year.value.trim()) || '' === gender.value.trim()) {
+                return alert('Por favor completa todos los campos');
             }
 
             sendData({
                 'name' : name.value,
                 'email': email.value,
-                'birthdate': birthdate.value,
+                'day': day.value,
+                'month': month.value,
+                'year': year.value,
+                'gender': gender.value,
                 'answers' : answers
             });
         });

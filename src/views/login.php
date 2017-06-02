@@ -15,7 +15,7 @@
         }
 
         .login a {
-            background-color: #3b5998;
+            background-color: #e56e10;
             border-color: rgba(0,0,0,0.2);
             border-radius: 5px;
             color: #fff;
@@ -38,13 +38,12 @@
         <img src="/antevenio/public/images/logo.png" />
     </div>
     <div class="login">
-        <a href="/antevenio/index.php/login">Log in!</a>
-        <?php if (isset($data['count']) && $data['count']): ?><p><?php echo $data['count']; ?> personas han realizado el quiz</p><?php endif; ?>
+        <a href="/antevenio/index.php/login">ENTRA Y VOTA POR LAS 7 MARAVILLAS!</a>
     </div>
     <div id="wrapper">
         <?php if (isset($data['count']) && $data['count']): ?>
             <div id="tus-votos">
-                <h1 class="thanks-title">Lo más votados</h1>
+                <h1 class="thanks-title">Lo más votados: <?php if (isset($data['count']) && $data['count']): ?><?php echo $data['count']; ?> personas han realizado el quiz<?php endif; ?></h1>
             </div>
         <?php endif; ?>
         <div class="body">
@@ -59,7 +58,7 @@
                                 <img src="/antevenio/public/images/<?php echo $mostVoted['image']; ?>.jpg" class="voted-answer-img"/>
                                 <div class="voted-answer-title">
                                     <?php echo $mostVoted['title']; ?><br />
-                                    <small><?php echo $mostVoted['votes']; ?> votos</small>
+                                    <?php echo $mostVoted['votes']; ?> votos
                                 </div>
                             </div>
                         <?php endforeach; ?>

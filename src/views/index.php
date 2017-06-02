@@ -14,7 +14,7 @@
     </div>
     <div id="wrapper">
         <form id="form-profile">
-            <h1 class="thanks-title">Los más votados</h1>
+            <h1 class="thanks-title">Los más votados: <?php if (isset($data['count']) && $data['count']): ?><?php echo $data['count']; ?> personas han realizado el quiz<?php endif; ?></h1>
             <div class="body">
                 <div id="thanks">
                     <div id="voted-answers">
@@ -27,7 +27,7 @@
                                     <img src="/antevenio/public/images/<?php echo $mostVoted['image']; ?>.jpg" class="voted-answer-img"/>
                                     <div class="voted-answer-title">
                                         <?php echo $mostVoted['title']; ?><br />
-                                        <small><?php echo $mostVoted['votes']; ?> votos</small>
+                                        <?php echo $mostVoted['votes']; ?> votos
                                     </div>
                                 </div>
                             <?php endforeach; ?>
@@ -49,8 +49,39 @@
                     <h2>¡Regístrate y Vota!</h2>
                     <input type="text" name="name" id="name" placeholder="Tu Nombre" required/>
                     <input type="email" name="email" id="email" placeholder="Tu Email" required/>
-                    <input type="text" name="birthdate" id="birthdate" onfocus="(this.type='date')" placeholder="Tu Fecha de Nacimiento" required>
-                    <button type="submit">VOTAR</button>
+                    <select name=day"" id="day" class="day" required>
+                        <option>Día</option>
+                        <?php foreach (range(1, 31) as $day): ?>
+                            <option value=""><?php echo $day; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <select name="month" id="month" class="month" required>
+                        <option>Mes</option>
+                        <option value="january">Enero</option>
+                        <option value="february">Febrero</option>
+                        <option value="march">Marzo</option>
+                        <option value="april">Abril</option>
+                        <option value="may">Mayo</option>
+                        <option value="june">Junio</option>
+                        <option value="july">Julio</option>
+                        <option value="august">Agosto</option>
+                        <option value="september">Septiembre</option>
+                        <option value="octuber">Octubre</option>
+                        <option value="november">Noviembre</option>
+                        <option value="december">Diciembre</option>
+                    </select>
+                    <select name="year" id="year" class="year" required>
+                        <option>Año</option>
+                        <?php foreach (range(1970, date('Y')) as $year): ?>
+                            <option value=""><?php echo $year; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <select name="gender" id="gender" class="gender" required>
+                        <option>Sexo</option>
+                        <option value="male">Hombre</option>
+                        <option value="female">Mujer</option>
+                    </select>
+                    <button type="submit">VOTA AQUÍ</button>
                 </div>
             </div>
         </form>

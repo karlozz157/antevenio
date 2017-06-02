@@ -76,7 +76,8 @@ class QuizManager
         $dataId = $this->medoo->insert('users', [
             'name'  => $data['name'],
             'email' => $data['email'],
-            'birthdate' => $data['birthdate'],
+            'birthdate' => sprintf('%d-%s-%d', $data['day'], $data['month'], $data['year']),
+            'gender' => $data['gender'],
             'location'  => $data['location'],
             '(JSON)answers' => $data['answers']
         ]);

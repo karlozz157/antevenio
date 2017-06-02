@@ -29,7 +29,7 @@ class QuizController
     public function indexAction()
     {
         $mostVoted = $this->quizManager->getMostVoted();
-        ViewHelper::load('index.php', ['mostVoted' => $mostVoted]);
+        ViewHelper::load('index.php', ['mostVoted' => $mostVoted, 'count' => $this->quizManager->count()]);
     }
 
     /**
