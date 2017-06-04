@@ -64,7 +64,7 @@ body {
     border-radius: 5px;
     color: #333;
     margin: .5em 0;
-    padding: 1%;
+    padding: 1.2% 1%;
     width: 100%;
 }
 
@@ -74,7 +74,7 @@ body {
     background: #fff;
     color: #333;
     margin: .5em 0;
-    padding: 1%;
+    padding: 1.2% 1%;
 }
 
 .footer select.month {
@@ -98,9 +98,9 @@ body {
     border: 1px solid #e56e10;
     border-radius: 5px;
     cursor: pointer;
-    color: #fff;
+    color: #000;
     margin: .5em 0;
-    padding: 1%;
+    padding: 5% 1%;
     width: 100%;
 }
 
@@ -182,6 +182,10 @@ body {
 @media only screen and (min-width:420px) {
     .answer, .voted-answer, .answer-votes {
         width: 50%;
+    }
+
+    .footer button[type="submit"] {
+        padding: 1.2% 1%;
     }
 }
 

@@ -297,10 +297,12 @@ var AntevenioApp = (function() {
         xhttp.open('POST', mainUrl + '/persist');
         xhttp.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
         xhttp.onreadystatechange = function() {
-            if (200 === xhttp.status) {
+            try {
                 localStorage.setItem('answers', JSON.stringify(answers));
-                window.location.href = mainUrl + '/thanks';
+            } catch(err) {
+                console.log(err.message);
             }
+            window.location.href = mainUrl + '/thanks';
         }
         xhttp.send(JSON.stringify(data));
     };

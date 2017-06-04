@@ -18,8 +18,11 @@
             background-color: #e56e10;
             border-color: rgba(0,0,0,0.2);
             border-radius: 5px;
+            box-shadow: 1px 1px 3px #333;
             color: #fff;
             display: block !important;
+            line-height: 1.2em;
+            font-size: 1.5em;
             margin-bottom: 10px;
             padding: 10px 1%;
             text-decoration: none;
@@ -38,12 +41,12 @@
         <img src="/antevenio/public/images/logo.png" />
     </div>
     <div class="login">
-        <a href="/antevenio/index.php/login">ENTRA Y VOTA POR LAS 7 MARAVILLAS!</a>
+        <a href="/antevenio/index.php/login">ENTRA Y VOTA POR LAS<br /> 7 MARAVILLAS!</a>
     </div>
     <div id="wrapper">
         <?php if (isset($data['count']) && $data['count']): ?>
             <div id="tus-votos">
-                <h1 class="thanks-title">Lo más votados: <?php if (isset($data['count']) && $data['count']): ?><?php echo $data['count']; ?> personas han realizado el quiz<?php endif; ?></h1>
+                <h2 class="thanks-title">Los más votados: <?php if (isset($data['count']) && $data['count']): ?><?php echo $data['count']; ?> personas han realizado el quiz<?php endif; ?></h2>
             </div>
         <?php endif; ?>
         <div class="body">

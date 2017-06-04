@@ -14,28 +14,9 @@
     </div>
     <div id="wrapper">
         <form id="form-profile">
-            <h1 class="thanks-title">Los más votados: <?php if (isset($data['count']) && $data['count']): ?><?php echo $data['count']; ?> personas han realizado el quiz<?php endif; ?></h1>
             <div class="body">
-                <div id="thanks">
-                    <div id="voted-answers">
-                        <?php if (isset($data['mostVoted'])): ?>
-                            <?php foreach($data['mostVoted'] as $key => $mostVoted): ?>        
-                                <div class="voted-answer">
-                                    <div class="voted-answer-description">
-                                        <?php echo $mostVoted['description']; ?>
-                                    </div>
-                                    <img src="/antevenio/public/images/<?php echo $mostVoted['image']; ?>.jpg" class="voted-answer-img"/>
-                                    <div class="voted-answer-title">
-                                        <?php echo $mostVoted['title']; ?><br />
-                                        <?php echo $mostVoted['votes']; ?> votos
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    </div>
-                </div>
                 <div class="description">
-                    <h2>Vota por tus favoritas</h2>
+                    <h1>Vota por tus favoritas</h1>
                     <p>Haz click sobre las imágenes para seleccionar tus 7 maravillas favoritas</p> 
                 </div>
                 <div id="answers">
@@ -46,7 +27,7 @@
             </div>
             <div class="footer">
                 <div>
-                    <h2>¡Regístrate y Vota!</h2>
+                    <h2>¡Regístrate aquí y Vota!</h2>
                     <input type="text" name="name" id="name" placeholder="Tu Nombre" required/>
                     <input type="email" name="email" id="email" placeholder="Tu Email" required/>
                     <select name=day"" id="day" class="day" required>
