@@ -123,6 +123,10 @@ body {
     padding: 0;
 }
 
+.answer {
+    border-bottom: 3px solid #fff !important;
+}
+
 .answer, .voted-answer, .answer-votes {
     display: inline-block;
     vertical-align: top;
@@ -159,14 +163,13 @@ body {
 }
 
 .answer-title {
-    color: #37a6dd;
-    font-size: .8em;
     font-weight: bold;
 }
 
-.answer-description {
+.answer-title, .answer-description {
     color: #fff;
-    font-size: .8em;
+    font-size: .7em;
+    text-align: center;
 }
 
 @media only screen and (min-width:320px) {
@@ -177,9 +180,17 @@ body {
     .voted-answer, .answer-votes {
         width: 100%;
     }
+
+    .voted-answer {
+        margin-bottom: 1em;
+    }
 }
 
 @media only screen and (min-width:420px) {
+    .voted-answer {
+        border: none !important;
+    }
+
     .answer, .voted-answer, .answer-votes {
         width: 50%;
     }
@@ -201,6 +212,7 @@ body {
     }
 
     .voted-answer {
+        border: none !important;
         margin: 0 1% 0 0;
         width: 11.5% !important;
     }
@@ -244,8 +256,13 @@ body {
     text-align: center;
 }
 
+.voted-answer {
+    border-bottom: .5em solid #fff;
+    padding-bottom: 1em;
+}
+
 .voted-answer-description, .voted-answer-title {
-    text-align: left;
+    text-align: center;
     margin: 0;
 }
 

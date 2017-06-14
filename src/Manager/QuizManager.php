@@ -11,6 +11,11 @@ use medoo;
 class QuizManager
 {
     /**
+     * @const int
+     */
+    const BASE_VOTES = 1000;
+
+    /**
      * @var medoo $medoo
      */
     protected $medoo;
@@ -28,7 +33,7 @@ class QuizManager
      */
     public function count()
     {
-        return $this->medoo->count('users');
+        return self::BASE_VOTES + $this->totalVotes + $this->medoo->count('users');
     }
 
     /**
@@ -59,7 +64,8 @@ class QuizManager
         $data = [];
 
         foreach ($mostVoted as $key => $voted) {
-            $images[$key]['votes'] = $voted;
+            $votes = self::BASE_VOTES + $voted;
+            $images[$key]['votes'] = $votes;
             $data[] = $images[$key];
         }
 

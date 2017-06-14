@@ -62,7 +62,7 @@
                         <option value="male">Hombre</option>
                         <option value="female">Mujer</option>
                     </select>
-                    <button type="submit">VOTA AQUÍ</button>
+                    <button type="submit" style="color: #fff !important;">VOTA AQUÍ</button>
                 </div>
             </div>
         </form>

@@ -64,7 +64,7 @@ var AntevenioApp = (function() {
             },
             {
                 'image' : 'viajero_0028',
-                'title' : 'Boca de Túnel',
+                'title' : 'Boca del Túnel',
                 'description' : 'Aguascalientes',
             },
             {
@@ -114,7 +114,7 @@ var AntevenioApp = (function() {
             },
             {
                 'image' : 'viajero_0015',
-                'title' : 'Las Estacas',
+                'title' : 'Lagunas de Zempoala',
                 'description' : 'Morelos',
             },
             {
@@ -144,12 +144,12 @@ var AntevenioApp = (function() {
             },
             {
                 'image' : 'viajero_0009',
-                'title' : 'Pantanos de Centla',
+                'title' : 'Tapijulapa',
                 'description' : 'Tabasco',
             },
             {
                 'image' : 'viajero_0008',
-                'title' : 'Desierto el Pinacate',
+                'title' : 'Cerro de Tetawaki',
                 'description' : 'Sonora',
             },
             {
@@ -164,7 +164,7 @@ var AntevenioApp = (function() {
             },
             {
                 'image' : 'viajero_0005',
-                'title' : 'Parque Nacional San Pedro Martir',
+                'title' : 'Laguna Hanson',
                 'description' : 'Baja California',
             },
             {

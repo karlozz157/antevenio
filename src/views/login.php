@@ -28,6 +28,11 @@
             text-decoration: none;
         }
 
+        .login a:hover {
+            color: #333;
+            background: #989898;
+        }
+
         .login p {
             background: whitesmoke;
             border-radius: 5px;
@@ -41,7 +46,7 @@
         <img src="/antevenio/public/images/logo.png" />
     </div>
     <div class="login">
-        <a href="/antevenio/index.php/login">ENTRA Y VOTA POR LAS<br /> 7 MARAVILLAS!</a>
+        <a href="/antevenio/index.php/login">DA CLIC AQUÍ Y VOTA<br /> POR LAS 7 MARAVILLAS</a>
     </div>
     <div id="wrapper">
         <?php if (isset($data['count']) && $data['count']): ?>
